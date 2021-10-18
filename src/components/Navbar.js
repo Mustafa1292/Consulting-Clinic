@@ -27,12 +27,18 @@ const Logo = styled.h1`
   font-size: 36px;
   font-weight: bold;
   text-decoration: underline crimson;
+  @media only screen and (max-width: 480px) {
+    font-size: 25px;
+  }
 `;
 
 const Menu = styled.ul`
   //The different options on the navbar
   display: flex;
   list-style: none; //removes the bullet points
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 const MenuItem = styled.li`
   // indivdual list items

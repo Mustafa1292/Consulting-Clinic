@@ -8,6 +8,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const Text = styled.div`
@@ -16,6 +19,10 @@ const Text = styled.div`
   font-weight: bold;
   font-size: 60px;
   margin-top: 30px;
+  @media only screen and (max-width: 480px) {
+    font-size: 20px;
+    margin-top: 5px;
+  }
 `;
 
 const TopSection = styled.div`

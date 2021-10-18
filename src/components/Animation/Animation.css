@@ -1,0 +1,27 @@
+.images {
+  /* width: 25px;
+  height: 25px;
+  background-color: black;
+  opacity: 1;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  z-index: -1;
+  position: absolute; */
+  /* display: flex; */
+  /* align-items: flex-start; */
+  /* flex-direction: row; */
+  width: 55px;
+  margin-left: 49px;
+  /* animation-name: Marquee;
+  animation-duration: 8s; */
+}
+
+/* @keyframes Marquee {
+  from {
+    transform: translateX(1px);
+  }
+  to {
+    transform: translateX(500px);
+  }
+} */

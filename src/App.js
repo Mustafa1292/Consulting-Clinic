@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
+import Testemonial from "./components/Testemonial";
 //import Footer from "./Footer";
 
 const Container = styled.div`
@@ -40,6 +41,9 @@ function App() {
         <Navbar />
         <Intro />
         <Shape />
+      </Container>
+      <Container>
+        <Testemonial />
       </Container>
       <Container>
         <Service />
