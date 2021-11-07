@@ -4,6 +4,7 @@ import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
 import Testemonial from "./components/Testemonial";
+import TesDel from "./components/TesDel";
 //import Footer from "./Footer";
 
 const Container = styled.div`
@@ -43,7 +44,8 @@ function App() {
         <Shape />
       </Container>
       <Container>
-        <Testemonial />
+        <TesDel />
+        {/* <Testemonial /> */}
       </Container>
       <Container>
         <Service />

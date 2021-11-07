@@ -38,9 +38,9 @@ const Service = () => {
         We <span style={{ color: "#f03e3e" }}> beat </span>the competition
       </Text>
       <Container>
-        <PriceCard price={40} type={"Padawan"} />
-        <PriceCard price={60} type={"Jedi"} />
-        <PriceCard price={100} type={"Jedi Master"} />
+        <PriceCard price={69.99} type={"Basic"} />
+        <PriceCard price={99.99} type={"Standard"} />
+        <PriceCard price={149.99} type={"Premium"} />
       </Container>
     </TopSection>
   );

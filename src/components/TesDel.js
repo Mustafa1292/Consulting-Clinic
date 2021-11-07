@@ -3,27 +3,31 @@ import styled from "styled-components";
 import { useState } from "react";
 import "./Testimonial.css";
 
-const Wapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  /* width: 1350px; */
 `;
 
 const Arrow = styled.div`
   font-size: 100px;
   height: 100vh;
-  margin-top: 250px;
+  margin-top: 100px;
   margin-left: 150px;
   margin-right: 150px;
   cursor: pointer;
 `;
 
 const Revtext = styled.div`
-  margin-top: 250px;
+  /* margin-top: 10px; */
+  padding-top: 35px;
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
   text-align: center;
   font-size: 20px;
   color: black;
-  //font-weight: lighter;
-  line-height: 45px;
+  font-weight: lighter;
+  line-height: 35px;
 `;
 
 const Name = styled.p`
@@ -46,13 +50,13 @@ const Review = [
     id: 2,
   },
   {
-    rev: "I feel like I am at a five star hotel ",
+    rev: " I have had my carpet cleaned two times in the past 6 months and just now when Jesus sent them my way I feel I have a new place again!! They will definitely be my on call moving forward thanks a lot!",
     date: "01/09/2021",
     name: "Weekend guests at our client's ",
     id: 3,
   },
   {
-    rev: "Faira did an amazing job and I will use her again and definitely recommend.",
+    rev: "Faira and her team did an amazing job and I will use her again and definitely recommend. ",
     date: "02/16/2020",
     name: "TAE",
     id: 4,
@@ -68,7 +72,7 @@ const Text = styled.p`
   /* #ffd43b */
 `;
 
-const Testemonial = () => {
+const TesDel = () => {
   const [counter, Setcounter] = useState(0);
 
   const Slider_right = () => {
@@ -81,36 +85,35 @@ const Testemonial = () => {
 
   return (
     <>
-      <div className="container">
-        <Text className="card">
-          {/* #fab005 */}
-          What our <span style={{ color: "#4dabf7" }}> Customers </span> say
-          about us
-        </Text>
+      <Text>
+        {/* #fab005 */}
+        What our <span style={{ color: "#4dabf7" }}> Customers </span> say about
+        us
+      </Text>
+      <div>
+        <Wrapper className="card">
+          <Arrow onClick={Slider_right}>{"<"}</Arrow>
+          {Review.map((revs, index) => {
+            return (
+              <Revtext keys={Review.id}>
+                {index === counter && (
+                  <p>
+                    {revs.rev}{" "}
+                    <Name>
+                      <em className="nameDate">{revs.name}</em> <br />
+                      <em className="nameDate">{revs.date}</em>
+                    </Name>
+                  </p>
+                )}{" "}
+                <br />
+              </Revtext> //understand this logic***
+            );
+          })}
+          <Arrow onClick={Slider_left}>{">"}</Arrow>
+        </Wrapper>
       </div>
-      <Wapper>
-        <Arrow onClick={Slider_right}>{"<"}</Arrow>
-
-        {Review.map((revs, index) => {
-          return (
-            <Revtext keys={Review.id}>
-              {index === counter && (
-                <p>
-                  {revs.rev}{" "}
-                  <Name>
-                    <em>{revs.name}</em> <br />
-                    <em>{revs.date}</em>
-                  </Name>
-                </p>
-              )}{" "}
-              <br />
-            </Revtext> //understand this logic***
-          );
-        })}
-        <Arrow onClick={Slider_left}>{">"}</Arrow>
-      </Wapper>
     </>
   );
 };
 
-export default Testemonial;
+export default TesDel;
