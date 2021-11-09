@@ -2,27 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import "./Testimonial.css";
+// import Spray from "../../Icons/spray.png";
+import SprayL from "../Icons/Click_bottle_left.png";
+import SprayR from "../Icons/Click_bottle_right.png";
+import SprayAudio from "../Icons/Bottle_spray.mp3";
+
+import { Howl } from "howler";
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  /* width: 1350px; */
 `;
 
 const Arrow = styled.div`
   font-size: 100px;
   height: 100vh;
   margin-top: 100px;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
   cursor: pointer;
 `;
 
 const Revtext = styled.div`
-  /* margin-top: 10px; */
-  padding-top: 35px;
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
+  padding-top: 55px;
   text-align: center;
   font-size: 20px;
   color: black;
@@ -38,7 +40,7 @@ const Name = styled.p`
 
 const Review = [
   {
-    rev: " Thank you! I am able to comfortably stay in my own place now. You really helped me out this week. ",
+    rev: '"Thank you! I am able to comfortably stay in my own place now. You really helped me out this week." ',
     date: "05/17/2020",
     name: "Jocelyn Britton",
     id: 1,
@@ -50,13 +52,13 @@ const Review = [
     id: 2,
   },
   {
-    rev: " I have had my carpet cleaned two times in the past 6 months and just now when Jesus sent them my way I feel I have a new place again!! They will definitely be my on call moving forward thanks a lot!",
+    rev: '"I have had my carpet cleaned two times in the past 6 months and just now when Jesus sent them my way I feel I have a new place again!! They will definitely be my on call moving forward thanks a lot!"',
     date: "01/09/2021",
     name: "Weekend guests at our client's ",
     id: 3,
   },
   {
-    rev: "Faira and her team did an amazing job and I will use her again and definitely recommend. ",
+    rev: '"Faira and her team did an amazing job and I will use her again and definitely recommend. "',
     date: "02/16/2020",
     name: "TAE",
     id: 4,
@@ -72,30 +74,46 @@ const Text = styled.p`
   /* #ffd43b */
 `;
 
+const Image = styled.img`
+  width: 200px;
+  height: 200px;
+`;
+
 const TesDel = () => {
   const [counter, Setcounter] = useState(0);
 
   const Slider_right = () => {
     Setcounter(counter === Review.length - 1 ? 0 : counter + 1);
+    var sound = new Howl({
+      src: [SprayAudio],
+    });
+
+    sound.play();
   };
 
   const Slider_left = () => {
     Setcounter(counter === 0 ? Review.length - 1 : counter - 1);
+    var sound = new Howl({
+      src: [SprayAudio],
+    });
+
+    sound.play();
   };
 
   return (
     <>
       <Text>
         {/* #fab005 */}
-        What our <span style={{ color: "#4dabf7" }}> Customers </span> say about
-        us
+        What our <span style={{ color: "#4dabf7" }}> Customers </span> say....
       </Text>
-      <div>
-        <Wrapper className="card">
-          <Arrow onClick={Slider_right}>{"<"}</Arrow>
+      <div className="card">
+        <Wrapper>
+          <Arrow onClick={Slider_right}>
+            <Image src={SprayL} alt="spray bottle" />
+          </Arrow>
           {Review.map((revs, index) => {
             return (
-              <Revtext keys={Review.id}>
+              <Revtext keys={Review.id} className="arrow">
                 {index === counter && (
                   <p>
                     {revs.rev}{" "}
@@ -109,7 +127,10 @@ const TesDel = () => {
               </Revtext> //understand this logic***
             );
           })}
-          <Arrow onClick={Slider_left}>{">"}</Arrow>
+          <Arrow onClick={Slider_left}>
+            {" "}
+            <Image src={SprayR} alt="spray bottle" />{" "}
+          </Arrow>
         </Wrapper>
       </div>
     </>

@@ -3,14 +3,21 @@ import styled from "styled-components";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
-import Testemonial from "./components/Testemonial";
-import TesDel from "./components/TesDel";
+import Testemonial from "./components/Testimonial/Testemonial";
+import Footer from "./components/Footer/Footer";
+// import TesDel from "./components/TesDel";
 //import Footer from "./Footer";
 
 const Container = styled.div`
   height: 100vh;
   overflow: hidden;
   position: relative;
+`;
+
+const Footer2 = styled.div`
+  height: 60vh;
+  background-color: #868e96;
+  display: flex;
 `;
 
 const Shape = styled.div`
@@ -44,18 +51,17 @@ function App() {
         <Shape />
       </Container>
       <Container>
-        <TesDel />
-        {/* <Testemonial /> */}
+        {/* <TesDel /> */}
+        <Testemonial />
       </Container>
       <Container>
         <Service />
         <ServiceShape />
       </Container>
 
-      {/* <Container>
-        <Contact />
+      <Footer2>
         <Footer />
-      </Container> */}
+      </Footer2>
     </div>
   );
 }
