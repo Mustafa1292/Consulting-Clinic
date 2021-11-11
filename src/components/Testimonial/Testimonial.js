@@ -6,7 +6,7 @@ import "./Testimonial.css";
 import SprayL from "../../Icons/Click_bottle_left.png";
 import SprayR from "../../Icons/Click_bottle_right.png";
 import SprayAudio from "../../Icons/Bottle_spray.mp3";
-// "../Icons/Bottle_spray.mp3";
+import "../Link.css";
 
 import { Howl } from "howler";
 
@@ -103,7 +103,7 @@ const TesDel = () => {
 
   return (
     <>
-      <Text>
+      <Text id="testimonial">
         {/* #fab005 */}
         What our <span style={{ color: "#4dabf7" }}> Customers </span> say....
       </Text>

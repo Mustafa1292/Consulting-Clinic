@@ -5,6 +5,7 @@ import Animation from "./Animation/Animation";
 // import Main from "./Images/Main.jpg";
 // import homeLogo from "./Images/homeLogo.png";
 import homeLogo from "./Images/homeLogo-removebg-preview.png";
+import "./Link.css";
 //import Broom from "../Icons/broom.png";
 
 const Container = styled.div`

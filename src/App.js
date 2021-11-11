@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
-import Testemonial from "./components/Testimonial/Testemonial";
+import Testimonial from "./components/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer";
 // import TesDel from "./components/TesDel";
 //import Footer from "./Footer";
@@ -52,7 +52,7 @@ function App() {
       </Container>
       <Container>
         {/* <TesDel /> */}
-        <Testemonial />
+        <Testimonial />
       </Container>
       <Container>
         <Service />

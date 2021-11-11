@@ -1,4 +1,22 @@
-p {
+.about {
   margin-top: 15px;
   margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.pages {
+  margin-left: 1150px;
+  line-height: 1px;
+  margin-bottom: 10px;
+}
+
+.pagesh1 {
+  margin-bottom: 50px;
+}
+
+.pagesp {
+  margin-bottom: 40px;
+  color: whitesmoke;
+  cursor: pointer;
 }
