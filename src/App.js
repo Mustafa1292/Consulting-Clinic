@@ -3,13 +3,22 @@ import styled from "styled-components";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
-import Testemonial from "./components/Testemonial";
-//import Footer from "./Footer";
+import Testimonial from "./components/Testimonial/Testimonial";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./components/About/About";
+import Schedule from "./components/Schedule/Schedule";
 
 const Container = styled.div`
   height: 100vh;
   overflow: hidden;
   position: relative;
+`;
+
+const Footer2 = styled.div`
+  height: 60vh;
+  background-color: #868e96;
+  display: flex;
 `;
 
 const Shape = styled.div`
@@ -36,25 +45,33 @@ const ServiceShape = styled.div`
 
 function App() {
   return (
-    <div>
-      <Container>
-        <Navbar />
-        <Intro />
-        <Shape />
-      </Container>
-      <Container>
-        <Testemonial />
-      </Container>
-      <Container>
-        <Service />
-        <ServiceShape />
-      </Container>
-
-      {/* <Container>
-        <Contact />
-        <Footer />
-      </Container> */}
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Container>
+            <Navbar />
+            <Intro />
+            <Shape />
+          </Container>
+          <Container>
+            <About />
+          </Container>
+          <Container>
+            <Testimonial />
+          </Container>
+          <Container>
+            <Service />
+            <ServiceShape />
+          </Container>
+          <Footer2>
+            <Footer />
+          </Footer2>
+        </Route>
+        <Route exact path="/schedule">
+          <Schedule />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

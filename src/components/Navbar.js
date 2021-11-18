@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import "./Link.css";
+import { Link } from "react-scroll";
 
 const Container = styled.div`
   //the flex container
@@ -60,18 +62,34 @@ const Button = styled.button`
 
 const Navbar = () => {
   return (
-    <Container>
+    <Container id="home">
       <Wrapper>
         <Left>
           <Logo>Three Little Cleaners</Logo>
           <Menu>
-            <MenuItem>Home</MenuItem>
-            <MenuItem>About us</MenuItem>
-            <MenuItem>Services</MenuItem>
-            <MenuItem>Contact</MenuItem>
+            <Link to="home">
+              {" "}
+              <MenuItem>Home</MenuItem>{" "}
+            </Link>
+            <Link to="about">
+              {" "}
+              <MenuItem>About us</MenuItem>{" "}
+            </Link>
+
+            <a href="/schedule">
+              <MenuItem>Services</MenuItem>
+            </a>
+
+            <Link to="home">
+              {" "}
+              <MenuItem>Contact</MenuItem>{" "}
+            </Link>
           </Menu>
         </Left>
-        <Button>Sign up</Button>
+        <a href="/schedule">
+          {" "}
+          <Button>Sign up</Button>{" "}
+        </a>
       </Wrapper>
     </Container>
   );

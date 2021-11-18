@@ -2,7 +2,10 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import Animation from "./Animation/Animation";
 
-import Main from "./Images/Main.jpg";
+// import Main from "./Images/Main.jpg";
+// import homeLogo from "./Images/homeLogo.png";
+import homeLogo from "./Images/homeLogo-removebg-preview.png";
+import "./Link.css";
 //import Broom from "../Icons/broom.png";
 
 const Container = styled.div`
@@ -116,6 +119,7 @@ const Image = styled.img`
   height: 450px;
   margin-bottom: 25px;
   border-radius: 20px;
+  border: none;
 `;
 
 const Marquee = keyframes`
@@ -151,7 +155,10 @@ const Intro = () => {
           and trustworthy cleaning services. Book your appointment today!
         </Desc>
         <Info>
-          <Button>Getting started</Button>
+          <a href="/schedule">
+            {" "}
+            <Button>Getting started</Button>{" "}
+          </a>
           <Contact>
             <Phone>(832) - 439 - 8832</Phone>
             <ContactText>Feel free to get in touch</ContactText>
@@ -159,7 +166,7 @@ const Intro = () => {
         </Info>
       </Left>
       <Right>
-        <Image src={Main}></Image>
+        <Image src={homeLogo}></Image>
       </Right>
     </Container>
   );
