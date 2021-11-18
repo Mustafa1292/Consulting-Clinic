@@ -35,12 +35,13 @@ const Service = () => {
   return (
     <TopSection>
       <Text>
-        We <span style={{ color: "#f03e3e" }}> beat </span>the competition
+        <span style={{ color: "#f03e3e" }}> Low </span> and{" "}
+        <span style={{ color: "#f03e3e" }}> affordable </span> prices
       </Text>
       <Container>
         <PriceCard price={69.99} type={"Basic"} />
         <PriceCard price={99.99} type={"Standard"} />
-        <PriceCard price={149.99} type={"Premium"} />
+        <PriceCard price={129.99} type={"Premium"} />
       </Container>
     </TopSection>
   );

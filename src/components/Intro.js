@@ -155,7 +155,10 @@ const Intro = () => {
           and trustworthy cleaning services. Book your appointment today!
         </Desc>
         <Info>
-          <Button>Getting started</Button>
+          <a href="/schedule">
+            {" "}
+            <Button>Getting started</Button>{" "}
+          </a>
           <Contact>
             <Phone>(832) - 439 - 8832</Phone>
             <ContactText>Feel free to get in touch</ContactText>

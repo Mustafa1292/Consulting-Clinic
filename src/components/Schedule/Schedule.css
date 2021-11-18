@@ -1,0 +1,11 @@
+.Schedule {
+  cursor: pointer;
+}
+
+.Schedule:hover {
+  background-color: #12b886;
+}
+
+.Desc {
+  font-size: 25px;
+}

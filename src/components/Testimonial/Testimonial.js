@@ -103,7 +103,7 @@ const TesDel = () => {
 
   return (
     <>
-      <Text id="testimonial">
+      <Text>
         {/* #fab005 */}
         What our <span style={{ color: "#4dabf7" }}> Customers </span> say....
       </Text>

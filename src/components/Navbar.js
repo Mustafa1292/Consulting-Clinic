@@ -71,18 +71,25 @@ const Navbar = () => {
               {" "}
               <MenuItem>Home</MenuItem>{" "}
             </Link>
-            <Link to="testimonial">
+            <Link to="about">
               {" "}
               <MenuItem>About us</MenuItem>{" "}
             </Link>
-            <MenuItem>Services</MenuItem>
+
+            <a href="/schedule">
+              <MenuItem>Services</MenuItem>
+            </a>
+
             <Link to="home">
               {" "}
               <MenuItem>Contact</MenuItem>{" "}
             </Link>
           </Menu>
         </Left>
-        <Button>Sign up</Button>
+        <a href="/schedule">
+          {" "}
+          <Button>Sign up</Button>{" "}
+        </a>
       </Wrapper>
     </Container>
   );

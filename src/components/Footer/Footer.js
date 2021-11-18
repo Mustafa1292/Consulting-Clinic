@@ -7,6 +7,7 @@ import Twitter from "../../Icons/twitter.png";
 import "../Link.css";
 
 import { Link } from "react-scroll";
+// import { Link } from "react-router-dom"
 
 // const Container = styled.div`
 //   /* display: block; */
@@ -42,7 +43,16 @@ const Image = styled.img`
   height: 30px;
   margin-top: 10px;
   margin-right: 55px;
-  /* border: 5px solid white; */
+`;
+
+const Contact = styled.div`
+  position: absolute;
+  margin-left: 710px;
+  margin-top: 300px;
+`;
+
+const Service = styled.p`
+  text-decoration: none;
 `;
 
 const Footer = () => {
@@ -77,11 +87,19 @@ const Footer = () => {
           {" "}
           <p className="pagesp">Home</p>{" "}
         </Link>
-        <Link to="testimonial">
+        <Link to="about">
           <p className="pagesp">About us</p> <br />
         </Link>
-        <p className="pagesp">Service</p>{" "}
+
+        <a href="/schedule">
+          <Service className="pagesp">Service</Service>{" "}
+        </a>
       </Pages>
+
+      <Contact>
+        <h1>Contact</h1>
+        <p style={{ color: "whitesmoke" }}>(832) - 439 - 8832</p>
+      </Contact>
 
       {/* <div>
         Icons made by{" "}

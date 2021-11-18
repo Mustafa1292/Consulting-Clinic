@@ -5,8 +5,9 @@ import Navbar from "./components/Navbar";
 import Service from "./components/Service";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer";
-// import TesDel from "./components/TesDel";
-//import Footer from "./Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./components/About/About";
+import Schedule from "./components/Schedule/Schedule";
 
 const Container = styled.div`
   height: 100vh;
@@ -44,25 +45,33 @@ const ServiceShape = styled.div`
 
 function App() {
   return (
-    <div>
-      <Container>
-        <Navbar />
-        <Intro />
-        <Shape />
-      </Container>
-      <Container>
-        {/* <TesDel /> */}
-        <Testimonial />
-      </Container>
-      <Container>
-        <Service />
-        <ServiceShape />
-      </Container>
-
-      <Footer2>
-        <Footer />
-      </Footer2>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Container>
+            <Navbar />
+            <Intro />
+            <Shape />
+          </Container>
+          <Container>
+            <About />
+          </Container>
+          <Container>
+            <Testimonial />
+          </Container>
+          <Container>
+            <Service />
+            <ServiceShape />
+          </Container>
+          <Footer2>
+            <Footer />
+          </Footer2>
+        </Route>
+        <Route exact path="/schedule">
+          <Schedule />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
